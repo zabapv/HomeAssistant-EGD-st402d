@@ -1,7 +1,7 @@
 {
   "domain": "egd_meter",
   "name": "EG.D Meter ST402D",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "config_flow": true,
   "integration_type": "device",
   "iot_class": "local_push",

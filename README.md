@@ -21,6 +21,10 @@ Neoficiální integrace pro Home Assistant, která zobrazuje údaje elektroměru
 
 V HACS otevřete vlastní repozitáře a přidejte `https://github.com/zabapv/HomeAssistant-EGD-st402d` jako integraci. Poté ji nainstalujte a restartujte Home Assistant.
 
+### Aktualizace
+
+Vydání na GitHubu mají stejnou verzi jako manifest integrace. HACS / Marketplace nabídne novější vydání jako aktualizaci; potvrďte instalaci a potom restartujte Home Assistant. Samotné stažení souborů z GitHubu integraci automaticky neaktualizuje.
+
 ### Ruční instalace
 
 Stáhněte repozitář a zkopírujte adresář `custom_components/egd_meter` do `config/custom_components/egd_meter`. Restartujte Home Assistant.

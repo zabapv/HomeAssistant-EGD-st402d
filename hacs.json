@@ -1,3 +1,4 @@
 {
-  "name": "EG.D Meter ST402D"
+  "name": "EG.D Meter ST402D",
+  "homeassistant": "2026.11.0"
 }

@@ -1,6 +1,6 @@
 # EG.D Meter ST402D – Home Assistant
 
-Neoficiální integrace pro Home Assistant, která zobrazuje údaje elektroměru EG.D přenášené přes RS-485 a TCP převodník. Nastavuje se v uživatelském rozhraní Home Assistantu.
+Neoficiální integrace pro Home Assistant, která zobrazuje údaje elektroměru EG.D přenášené přes RS-485 a TCP převodník USR-DR164. Nastavuje se v uživatelském rozhraní Home Assistantu.
 
 ## Funkce
 

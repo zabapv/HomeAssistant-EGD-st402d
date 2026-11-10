@@ -41,8 +41,9 @@ class MeterCoordinator(DataUpdateCoordinator[ReceivedNotification | None]):
 
     @property
     def online(self) -> bool:
-        return (not self._closed and self._fresh and not self.identity_mismatch
-                and self.connection_state is ConnectionState.CONNECTED)
+        # Push measurements remain valid during a short TCP reconnect. The
+        # freshness deadline belongs to the last accepted frame, not the socket.
+        return not self._closed and self._fresh and not self.identity_mismatch
 
     def get_object(self, obis: str) -> DataObject | None:
         return self.data.notification.get_object(obis) if self.data is not None else None
@@ -85,8 +86,6 @@ class MeterCoordinator(DataUpdateCoordinator[ReceivedNotification | None]):
     @callback
     def _handle_state(self, state: ConnectionState) -> None:
         self.connection_state = state
-        if state is not ConnectionState.CONNECTED:
-            self._fresh = False
         if not self._closed:
             self.async_update_listeners()
 

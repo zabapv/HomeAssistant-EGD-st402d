@@ -1,0 +1,93 @@
+{
+  "title": "EG.D Meter ST402D",
+  "config": {
+    "step": {
+      "user": {
+        "title": "EG.D meter",
+        "description": "Connect to the RS485 customer interface through a TCP converter. The first measurement may take 60 seconds. Units follow EG.D documentation; compare the readings with the meter display to verify the scale.",
+        "data": {
+          "host": "IP address or hostname",
+          "port": "TCP port",
+          "name": "Device name"
+        }
+      },
+      "reconfigure": {
+        "title": "Reconfigure the same meter",
+        "description": "Connect to the RS485 customer interface through a TCP converter. The first measurement may take 60 seconds. Units follow EG.D documentation; compare the readings with the meter display to verify the scale.",
+        "data": {
+          "host": "IP address or hostname",
+          "port": "TCP port",
+          "name": "Device name"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot connect. Check the address, port and converter availability.",
+      "invalid_input": "Enter a valid address, a port between 1 and 65535, and a nonempty name."
+    },
+    "abort": {
+      "already_configured": "This endpoint is already configured.",
+      "reconfigure_successful": "Connection settings updated."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "import_power": {
+        "name": "Import power"
+      },
+      "import_power_l1": {
+        "name": "Import power L1"
+      },
+      "import_power_l2": {
+        "name": "Import power L2"
+      },
+      "import_power_l3": {
+        "name": "Import power L3"
+      },
+      "export_power": {
+        "name": "Export power"
+      },
+      "export_power_l1": {
+        "name": "Export power L1"
+      },
+      "export_power_l2": {
+        "name": "Export power L2"
+      },
+      "export_power_l3": {
+        "name": "Export power L3"
+      },
+      "import_energy": {
+        "name": "Imported energy"
+      },
+      "import_energy_t1": {
+        "name": "Imported energy tariff 1"
+      },
+      "import_energy_t2": {
+        "name": "Imported energy tariff 2"
+      },
+      "import_energy_t3": {
+        "name": "Imported energy tariff 3"
+      },
+      "import_energy_t4": {
+        "name": "Imported energy tariff 4"
+      },
+      "export_energy": {
+        "name": "Exported energy"
+      },
+      "active_tariff": {
+        "name": "Active tariff"
+      },
+      "serial_number": {
+        "name": "Serial number"
+      },
+      "last_received": {
+        "name": "Last received measurement"
+      }
+    },
+    "binary_sensor": {
+      "connection": {
+        "name": "Connection"
+      }
+    }
+  }
+}

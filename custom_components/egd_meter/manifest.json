@@ -1,0 +1,12 @@
+{
+  "domain": "egd_meter",
+  "name": "EG.D Meter ST402D",
+  "version": "0.1.0",
+  "config_flow": true,
+  "integration_type": "device",
+  "iot_class": "local_push",
+  "documentation": "https://github.com/zabapv/HomeAssistant-EGD-st402d",
+  "issue_tracker": "https://github.com/zabapv/HomeAssistant-EGD-st402d/issues",
+  "codeowners": [],
+  "requirements": []
+}

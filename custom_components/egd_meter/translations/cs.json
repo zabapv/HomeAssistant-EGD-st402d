@@ -1,0 +1,93 @@
+{
+  "title": "EG.D Meter ST402D",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Elektroměr EG.D",
+        "description": "Připojení k zákaznickému rozhraní RS485 přes TCP převodník. První měření může přijít až za 60 sekund. Jednotky vycházejí z dokumentace EG.D; měřítko ověřte porovnáním s displejem.",
+        "data": {
+          "host": "IP adresa nebo název serveru",
+          "port": "TCP port",
+          "name": "Název zařízení"
+        }
+      },
+      "reconfigure": {
+        "title": "Změnit připojení stejného elektroměru",
+        "description": "Připojení k zákaznickému rozhraní RS485 přes TCP převodník. První měření může přijít až za 60 sekund. Jednotky vycházejí z dokumentace EG.D; měřítko ověřte porovnáním s displejem.",
+        "data": {
+          "host": "IP adresa nebo název serveru",
+          "port": "TCP port",
+          "name": "Název zařízení"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Nelze navázat TCP spojení. Ověřte adresu, port a dostupnost převodníku.",
+      "invalid_input": "Vyplňte platnou adresu, port 1–65535 a neprázdný název."
+    },
+    "abort": {
+      "already_configured": "Tento server a port už jsou nakonfigurované.",
+      "reconfigure_successful": "Připojení bylo aktualizováno."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "import_power": {
+        "name": "Celkový odběr"
+      },
+      "import_power_l1": {
+        "name": "Odběr L1"
+      },
+      "import_power_l2": {
+        "name": "Odběr L2"
+      },
+      "import_power_l3": {
+        "name": "Odběr L3"
+      },
+      "export_power": {
+        "name": "Celková dodávka"
+      },
+      "export_power_l1": {
+        "name": "Dodávka L1"
+      },
+      "export_power_l2": {
+        "name": "Dodávka L2"
+      },
+      "export_power_l3": {
+        "name": "Dodávka L3"
+      },
+      "import_energy": {
+        "name": "Celková energie odběru"
+      },
+      "import_energy_t1": {
+        "name": "Energie odběru tarif 1"
+      },
+      "import_energy_t2": {
+        "name": "Energie odběru tarif 2"
+      },
+      "import_energy_t3": {
+        "name": "Energie odběru tarif 3"
+      },
+      "import_energy_t4": {
+        "name": "Energie odběru tarif 4"
+      },
+      "export_energy": {
+        "name": "Celková energie dodávky"
+      },
+      "active_tariff": {
+        "name": "Aktivní tarif"
+      },
+      "serial_number": {
+        "name": "Sériové číslo"
+      },
+      "last_received": {
+        "name": "Poslední přijaté měření"
+      }
+    },
+    "binary_sensor": {
+      "connection": {
+        "name": "Připojení"
+      }
+    }
+  }
+}
